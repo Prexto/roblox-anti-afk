@@ -87,4 +87,4 @@ SetTimer, DoJump, 3000   ; 3000ms = 3 segundos (modo test)
 
 ## 📄 Licencia
 
-Libre para uso personal. Hecho por **Prexto**.
+[The Unlicense](LICENSE) — dominio público. Haz lo que quieras con esto. Hecho por **Prexto**.
