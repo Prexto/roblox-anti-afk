@@ -28,13 +28,16 @@ Gui, Color, %BG_COLOR%
 Gui, Margin, 0, 0
 
 ; Barra de título custom (draggable)
-titleBarW := W - 30
+titleBarW := W - 56
 Gui, Add, Text, x0 y0 w%titleBarW% h28 Background%HEADER_COLOR% vTitleBar gDragWindow
 Gui, Font, s9 c%ACCENT% Bold, Segoe UI
-Gui, Add, Text, x12 y5 w200 h20 Background%HEADER_COLOR% gDragWindow, ANTI-AFK  //  ROBLOX
+Gui, Add, Text, x12 y5 w150 h20 Background%HEADER_COLOR% gDragWindow, ANTI-AFK  //  ROBLOX
 Gui, Font, s7 c%GRAY% Normal, Segoe UI
-byX := W - 100
+byX := titleBarW - 75
 Gui, Add, Text, x%byX% y8 w70 h16 Right Background%HEADER_COLOR% gDragWindow, by Prexto
+Gui, Font, s9 c%WHITE% Bold, Segoe UI
+minX := W - 56
+Gui, Add, Text, x%minX% y3 w28 h24 Center gMinimizeGui vMinBtn, _
 Gui, Font, s9 c%RED% Bold, Segoe UI
 closeX := W - 28
 Gui, Add, Text, x%closeX% y3 w28 h24 Center gCloseApp vCloseBtn, X
@@ -115,6 +118,10 @@ F1::
         GuiControl,, StatusText, PAUSADO
         GuiControl,, ErrorText,
     }
+return
+
+MinimizeGui:
+    Gui, Minimize
 return
 
 CloseApp:
